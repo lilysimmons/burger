@@ -27,11 +27,11 @@ $(function() {
   
       var newBurger = {
         burger_name: $("#burgerName").val().trim(),
-        devoured: 0
-        // $("[status=devoured]:checked")
+        devoured: false
       };
-  
-      // Send the POST request.
+      //check to see if burger name exists
+      if (newBurger.burger_name.length > 0){
+        // Send the POST request.
       $.ajax("/api/burgers", {
         type: "POST",
         data: newBurger
@@ -42,6 +42,11 @@ $(function() {
           location.reload();
         }
       );
+      }
+      else {
+          alert("Please enter a value");
+      }
+      
     });
   
     $(".remove-burger").on("click", function(event) {

@@ -1,5 +1,7 @@
-<p>Murder my Burger</p>
-<img src="https://i.dlpng.com/static/png/87505_thumb.png" alt="burger">
+<h1 class="text-center">Murder my Burger</h1>
+<div class="text-center">
+<img src="https://i.dlpng.com/static/png/87505_thumb.png" alt="burger" class="text-center">
+</div>
 
 
 <div class="container-fluid">
@@ -12,33 +14,12 @@
                 {{#each burger}}
                 {{#unless devoured}}
                 <div class="row">
-                     <button class="devour" data-id="{{id}}" data-devoured="{{devoured}}">
-                        {{#if devoured}}EAT ME!{{else}}YUM!{{/if}}
-                    </button>
+                     <button class="devour" data-id="{{id}}" data-devoured="{{devoured}}">EAT ME!</button>
                     <span>{{this.burger_name}}</span>
-                   
-
                 </div>
-
-
                 {{/unless}}
                 {{/each}}
             </ul>
-
-
-            {{!-- <li>
-	{{name}}
-
-	<button class="change-sleep" data-id="{{id}}" data-newsleep="{{sleep}}">
-		{{#if sleep}}SLEEP TIME!{{else}}WAKE UP!{{/if}}
-	</button>
-
-	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
-    
-</li> --}}
-
-
-
         </div>
 
 
@@ -48,7 +29,7 @@
 
                 <div class="form-group">
                     <label for="newBurger">Add New Burger</label>
-                    <input type="text" class="form-control" id="burgerName" placeholder="add da burger">
+                    <input type="text" class="form-control" id="burgerName" placeholder="May I take your order?">
                 </div>
 
                 <button type="submit" id="submitBtn" class="btn btn-primary">Submit</button>
@@ -63,8 +44,12 @@
             <ul>
                 {{#each burger}}
                 {{#if devoured}}
+                <div class="row">
                 <button class="remove-burger" data-id="{{this.id}}">DELETE ME!</button>
                 <span>{{this.burger_name}}</span>
+
+                </div>
+                
                 {{/if}}
 {{!-- {else}}Be Gentle! --}}
                 {{/each}}

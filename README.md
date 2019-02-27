@@ -21,7 +21,7 @@ Users are greeted by a delicious burger.
 
 Users can enter the name of their desired burger using a submit form.
 
-![add-da-burger](public/assets/img/add-da-burger.png
+![add-da-burger](public/assets/img/add-da-burger.png)
 
 That burger then gets added to the database and an `EAT ME` button is generated.
 

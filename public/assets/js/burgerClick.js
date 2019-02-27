@@ -44,7 +44,7 @@ $(function () {
             );
         }
         else {
-            alert("Please enter a value");
+            alert("Submit form cannot be empty. Please fill me up - OM NOM NOM!");
         }
 
     });
